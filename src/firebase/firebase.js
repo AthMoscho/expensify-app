@@ -1,17 +1,17 @@
 import * as firebase from 'firebase';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCe-BP908OKIKJKlMXoCE7IADmgSqsSI8k",
-    authDomain: "expensify-athmosh.firebaseapp.com",
-    databaseURL: "https://expensify-athmosh.firebaseio.com",
-    projectId: "expensify-athmosh",
-    storageBucket: "expensify-athmosh.appspot.com",
-    messagingSenderId: "477515873473",
-    appId: "1:477515873473:web:2034aa4ca5f2da084ee840"
+    apiKey: process.env.FIREBASE_API_KEY,
+    authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+    databaseURL: process.env.FIREBASE_DATABASE_URL,
+    projectId: process.env.FIREBASE_PROJECT_ID,
+    storageBucket: process.env.FIRABASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.FIRABESE_APP_ID
   };
 
   firebase.initializeApp(firebaseConfig);
 
-  firebase.database().ref().set({
-      name: 'Ath Mosh'
-  })
+  const database = firebase.database();
+
+  export { firebase, database as default };

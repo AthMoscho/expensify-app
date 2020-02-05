@@ -12,9 +12,9 @@ import './firebase/firebase';
 
 const store = configureStore();
 
-store.dispatch(addExpense({description: 'Water Bill', amount: 122000 }));
-store.dispatch(addExpense({description: 'Gas Bill', amount: 112500 }));
-store.dispatch(addExpense({description: 'Rent', amount: 10545 }));
+// store.dispatch(addExpense({description: 'Water Bill', amount: 122000 }));
+// store.dispatch(addExpense({description: 'Gas Bill', amount: 112500 }));
+// store.dispatch(addExpense({description: 'Rent', amount: 10545 }));
 
 const jsx = (
     <Provider store={store}>
