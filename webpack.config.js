@@ -26,7 +26,7 @@ module.exports = (env) => {
             'process.env.FIRABESE_APP_ID': JSON.stringify(process.env.FIRABESE_APP_ID)
         })
         ],      
-        entry: './src/app.js',
+        entry: ['@babel/polyfill', './src/app.js'],
         output: {
             path: path.join(__dirname,'public','dist'),
             filename: 'bundle.js'

@@ -81,7 +81,6 @@ test('should edit expese from firebase' ,(done) => {
     })
 })
 
-//expect.any (expect what type ( number bool string array obj) )
 test('should setup add expense action object with provided values', () => {
     const action = addExpense(expenses[2]);
     expect(action).toEqual({
